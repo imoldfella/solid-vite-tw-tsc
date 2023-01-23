@@ -37,6 +37,7 @@ export const basicSetup: Extension = (() => [
     crosshairCursor(),
     highlightActiveLine(),
     highlightSelectionMatches(),
+    markdown(),
     keymap.of([
         ...closeBracketsKeymap,
         ...defaultKeymap,
@@ -52,8 +53,7 @@ let startState = EditorState.create({
     doc: "Hello World",
     extensions: [
         basicSetup,
-        markdown(),
-        keymap.of(defaultKeymap),
+
     ]
 })
 
