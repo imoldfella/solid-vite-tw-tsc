@@ -18,7 +18,6 @@ import { searchKeymap, highlightSelectionMatches } from "@codemirror/search"
 import { autocompletion, completionKeymap, closeBrackets, closeBracketsKeymap } from "@codemirror/autocomplete"
 import { lintKeymap } from "@codemirror/lint"
 
-
 export const basicSetup: Extension = (() => [
     lineNumbers(),
     highlightActiveLineGutter(),
@@ -53,11 +52,10 @@ let startState = EditorState.create({
     doc: "Hello World",
     extensions: [
         basicSetup,
-
     ]
 })
 
-export const Editor : Component<{ }> = (props) => {
+export const Editor : Component<{ }> = () => {
     let div : HTMLDivElement 
     onMount(()=>{
         new EditorView({
